@@ -47,6 +47,65 @@ The forensic report will include the following sections:
 - **System Information**: Displaying system details such as CPU, memory, file system, etc.
 - **Navigation Bar**: Includes links to **GitHub** and **LinkedIn** profiles.
 
+**Report Output like**
+```bash
+# Server Forensic Report
+
+**Report generated at:** 2025-01-20 15:45:32  
+**Operating System:** Windows
+
+## System Information:
+
+| Metric             | Value      |
+|--------------------|------------|
+| **CPU Usage**      | 15%        |
+| **Memory Usage**   | 60%        |
+| **Disk Usage**     | 78%        |
+| **Network Interfaces** | Ethernet, Wi-Fi |
+
+## Log Paths:
+
+| Log Type    | Log Path                                              |
+|-------------|-------------------------------------------------------|
+| **access_log**  | `C:\xampp\apache\logs\access.log`                     |
+| **error_log**   | `C:\xampp\apache\logs\error.log`                      |
+| **httpd_pid**   | `C:\xampp\apache\logs\httpd.pid`                      |
+| **install_log** | `C:\xampp\apache\logs\install.log`                    |
+| **ssl_log**     | `C:\xampp\apache\logs\ssl_request.log`                |
+
+## Logs Content:
+
+| Log Type    | Content                                                                 |
+|-------------|-------------------------------------------------------------------------|
+| **access_log**  | `127.0.0.1 - - [20/Jan/2025:15:30:01 +0000] "GET /index.html HTTP/1.1" 200 432` |
+| **error_log**   | `AH00558: apache2: Could not reliably determine the server's fully qualified domain name` |
+| **httpd_pid**   | `12345`                                                                 |
+| **install_log** | `Installing Apache 2.4.51`                                             |
+| **ssl_log**     | `ssl_error: Certificate Expired`                                      |
+
+## Windows User List:
+
+| **User List** |
+|---------------|
+| Administrator |
+| User1         |
+| Guest         |
+
+## Active Network Connections:
+
+| **Local Address**   | **Remote Address**  | **Status**     |
+|---------------------|---------------------|----------------|
+| 192.168.1.2:80     | 192.168.1.5:123     | ESTABLISHED    |
+| 192.168.1.2:443    | 192.168.1.4:80      | LISTENING      |
+
+## Disk Usage:
+
+| **Partition** | **Used Space (%)** |
+|---------------|--------------------|
+| C:\           | 80%                |
+| D:\           | 55%                |
+```
+
 ## Contribution
 
 Contributions are welcome! If you want to add features, improve the code, or fix bugs, please submit a pull request.
